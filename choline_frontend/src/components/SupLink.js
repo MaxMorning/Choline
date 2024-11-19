@@ -42,7 +42,7 @@ export default class SupLink extends Component {
 
 
     render() {
-        console.log(this.state.children)
+        // console.log(this.state.children)
         return <a onClick={this.onClick} style={{
             color: '#f8f8f8',
             // textDecoration: this.state.isHover ? 'underline' : 'none'

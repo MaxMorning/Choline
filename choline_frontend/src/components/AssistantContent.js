@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Flex, Card, Typography } from 'antd';
-import Markdown from 'react-markdown';
+import { Flex, Card, Typography, Spin } from 'antd';
 import MarkdownRenderer from './MarkdownRenderer';
 
 const { Text, Link } = Typography;
@@ -24,7 +23,12 @@ export default class AssistantContent extends Component {
             <Flex gap='small' vertical justify='flex-start'>
                 <Text type='secondary'>{'Assistant\t' + this.state.info.time}</Text>
                 <Card style={{backgroundColor: '#EEEEEE'}}>
-                    <MarkdownRenderer markdown={this.state.info.content} />
+                    {this.state.info.content === null ? 
+                        <Spin />
+                        :
+                        <MarkdownRenderer markdown={this.state.info.content} />
+                    }
+                    
                 </Card>
             </Flex>
         )

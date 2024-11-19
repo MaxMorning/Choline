@@ -3,19 +3,10 @@
  */
  import axios from 'axios'
 
-//  axios.defaults.baseURL = 'http://127.0.0.1:8080'
+//  axios.defaults.baseURL = 'http://127.0.0.1:11434'
  
  export default class Requester {
-     static requestJSON(request, withAuth, onSuccessCallback, onErrorCallback) {
-         if (withAuth === true) {
-             request.headers = {};
-             var token = Requester.getAuthToken();
-             if (token == null) {
-                 onErrorCallback("NO_TOKEN_AVAILABLE");
-             }
-             request.headers['Authorization'] = token;
-         }
- 
+     static requestJSON(request, onSuccessCallback, onErrorCallback) {
          axios(request).then(
              (response) => {
                  if (response.status !== 200) {

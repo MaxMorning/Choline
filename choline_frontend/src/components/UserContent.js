@@ -24,7 +24,7 @@ export default class UserContent extends Component {
                 <Text type='secondary'>{'User\t' + this.state.info.time}</Text>
                 <Card style={{backgroundColor: '#C9EAFF'}}>
                     <Flex gap='small' vertical justify='flex-start'>
-                        <Text>{this.state.info.content}</Text>
+                        <Text style={{whiteSpace: 'pre-wrap', wordBreak: 'break-all'}}>{this.state.info.content}</Text>
                         {this.state.info.images ? (
                             <Image src={this.state.info.images[0]} width='10vw'/>
                         ) : null}
