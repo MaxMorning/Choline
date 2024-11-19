@@ -45,7 +45,7 @@ async def handle(request):
         content = await f.read()
 
     # 根据文件扩展名设置 Content-Type
-    if path.endswith('.js'):
+    if path.endswith('.js') or path.endswith('.jsx'):
         content_type = 'application/javascript'
     elif path.endswith('.jpg') or path.endswith('.jpeg'):
         content_type = 'image/jpeg'
@@ -53,6 +53,10 @@ async def handle(request):
         content_type = 'image/png'
     elif path.endswith('.gif'):
         content_type = 'image/gif'
+    elif path.endswith('.css') or path.endswith('.scss'):
+        content_type = 'text/css'
+    elif path.endswith('.json'):
+        content_type = 'application/json'
     else:
         content_type = 'text/html'
 
