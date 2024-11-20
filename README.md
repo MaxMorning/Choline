@@ -6,7 +6,7 @@
 ```sh
 pip3 install aiohttp aiofiles requests
 ```
-1. 下载```release.zip```并解压。
+1. 下载[```release.zip```](https://github.com/MaxMorning/Choline/releases)并解压。
 2. 在解压目录下运行main.py。
 ```sh
 python3 main.py
@@ -18,6 +18,7 @@ python3 main.py
 ✅ 无需Docker，部署简单  
 ✅ 中文界面  
 
+❌︎ 并非流式输出（一次回答一大坨）
 ❌︎ 没有对话历史记录  
 ❌︎ 没有英语界面  
 
